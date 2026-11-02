@@ -1,6 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const app = express();
+app.disable('x-powered-by');
 
 app.use(session({ secret: 'demo-secret', resave: false, saveUninitialized: true }));
 
